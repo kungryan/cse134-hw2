@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Contact Me!</title>
+        <link href="images/contact.ico" rel="icon">
+    </head>
+    <body>
+        <header>
+            <h1>Contact Me</h1>
+            <p>Fill out the information below and I will get back to you soon!</p>
+            <hr>
+        </header>
+        <main>
+            <form action="/form-handler" method="POST">
+                <!--TODO--> <input type="hidden" name="bot" value="true">
+                <label for="firstName"> First Name:
+                    <input type="text" name="firstName" id="firstName" required>
+                </label>
+                <label for="lastName"> Last Name:
+                    <input type="text" name="lastName" id="lastName" required>
+                </label>
+                <label for="email"> E-mail:
+                    <input type="email" name="email" id="email" pattern="+@example\.com" required>
+                </label>
+                <label for="reason">Reason:
+                    <select name="reason" id="reason">
+                        <option value="business">Business</option>
+                        <option value="inquiry">Inquiry</option>
+                    </select>
+                </label>
+                <label for="comments">Comments:
+                    <textarea name="comments" id="comments" cols="80" rows="5" placeholder="Lorem ipsum" required ></textarea>
+                </label>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
